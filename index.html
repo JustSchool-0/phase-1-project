@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="./bubblegame_scores.css">
+    <title>Pop-the-Bubble!</title>
+    <script type="importmap">
+        {
+          "imports": {
+            "netUtils": "./global/js/netUtils.js",
+            "consts": "./global/js/consts.js"
+          }
+        }
+    </script>
+</head>
+<body>
+
+<div class="glass-container" id="nav-container">
+    <div class="nav" id="nav-back-button">
+        <a href="" class="icon-button" id="back-button"></a>
+    </div>
+    <div class="nav" id="nav-mobile-button">
+        <a href="#" class="icon-button" id="mobile-button"></a>
+    </div>
+    <div class="nav" id="nav-mnk-button">
+        <a href="#" class="icon-button" id="mnk-button"></a>
+    </div>
+</div>
+
+<div class="glass-container">
+    <div id="self-score-container">
+    </div>
+</div>
+
+<div class="glass-container">
+    <div id="top-scores-container">
+    </div>
+</div>
+
+<script src="./bubblegame_scores.js" type="module"></script>
+</body>
+</html>

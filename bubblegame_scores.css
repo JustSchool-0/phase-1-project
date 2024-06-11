@@ -1,0 +1,171 @@
+* {
+    scrollbar-width: none;
+    scrollbar-color: #888 #020413; /* Thumb color and track color */
+}
+
+body {
+    margin: 0;
+
+    background-image: url('./assets/bubblegame/cat_cute_ball.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-attachment: fixed; /* Fixed background for scrolling */
+    background-position: center center; /* Center the background image */
+    font-family: "Sitka Banner", sans-serif;
+}
+
+.glass-container {
+    max-width: 50%;
+    min-width: 250px;
+    margin: 50px auto;
+    padding: 10px;
+    color: whitesmoke;
+    background: rgba(255, 255, 255, 15%);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+}
+
+#nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    align-self: center;
+    padding: 1.3em 1em;
+
+    margin: 50px auto;
+
+    color: whitesmoke;
+    background-color: rgba(255, 255, 255, 10%);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 10%);
+    border: none;
+    border-radius: 10px;
+    transition: all 0.5s ease 0s, width 0.5s ease-in-out;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+.nav {
+    position: relative;
+
+    align-self: center;
+    padding: 1em 0.7em;
+    margin: 10px 5px;
+
+    font-size: 24px;
+    vertical-align: center;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-decoration: none;
+
+    color: whitesmoke;
+    background-color: rgba(255, 255, 255, 10%);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 10%);
+    border: none;
+    border-radius: 10px;
+    transition: all 0.5s ease 0s, width 0.5s ease-in-out;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+.icon-button {
+    font-family: 'Material Icons', serif;
+    font-size: 40px;
+}
+
+#back-button:before {
+    content: "arrow_back";
+}
+
+#mobile-button:before {
+    content: "smartphone";
+}
+
+#mnk-button:before {
+    content: "mouse";
+}
+
+.scoreinfo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+
+    align-self: center;
+    padding: 1.3em 1em;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: whitesmoke;
+    background-color: rgba(255, 255, 255, 10%);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 10%);
+    border: none;
+    border-radius: 10px;
+    transition: all 0.5s ease 0s, width 0.5s ease-in-out;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    position: relative;
+    margin: 10px;
+}
+
+.scoreinfo:hover,
+.scoreinfo:focus,
+.nav:hover,
+.nav:focus {
+    color: #000000;
+    background-color: rgba(255, 255, 255, 30%);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 30%);
+    border-radius: 20px;
+}
+
+.nav.active {
+    color: #000000;
+    background-color: rgba(255, 255, 255, 50%);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 30%);
+}
+
+.scoreinfo:active {
+    border-radius: 30px;
+}
+
+.username {
+    font-size: 24px;
+    vertical-align: center;
+    text-align: left;
+}
+
+.ranking {
+    background-color: hsla(50, 100%, 45%, 75%);
+    font-size: 24px;
+    vertical-align: center;
+    text-align: right;
+    border-radius: 5px;
+    margin: auto 0 auto auto;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    z-index: 1;
+}
+
+.stats-container {
+    margin-top: 5px;
+    vertical-align: center;
+    position: relative;
+    display: flow;
+}
+
+.stats {
+    font-size: 14px;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
