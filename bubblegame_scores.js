@@ -49,6 +49,7 @@ function onResize() {
 
     const innerWidth = window.innerWidth;
     if (innerWidth >= 972) {
+        // Horizontal layout
         scoreInfoElements.forEach((scoreInfo) => {
             scoreInfo.style.gridTemplateColumns = 'repeat(3, 1fr)';
             scoreInfo.style.gap = '40px';
@@ -63,6 +64,7 @@ function onResize() {
             ranking.style.marginRight = '0';
         });
     } else {
+        // Vertical layout
         scoreInfoElements.forEach((scoreInfo) => {
             scoreInfo.style.gridTemplateColumns = 'repeat(1, 3fr)';
             scoreInfo.style.gap = '0';
@@ -92,16 +94,16 @@ function createScoreInfo(scoreData) {
     let backgroundColor;
     switch (scoreData.rank) {
         case 1:
-            backgroundColor = "hsla(46,98%,52%,0.75)";
+            backgroundColor = "hsla(46, 98%, 52%, 0.75)";
             break;
         case 2:
-            backgroundColor = "hsla(190,78%,50%,0.75)";
+            backgroundColor = "hsla(190, 78%, 50%, 0.75)";
             break;
         case 3:
-            backgroundColor = "hsla(27,100%,45%,0.75)";
+            backgroundColor = "hsla(27, 100%, 45%, 0.75)";
             break;
         default:
-            backgroundColor = "hsla(194,16%,73%,0.75)";
+            backgroundColor = "hsla(194, 16%, 73%, 0.75)";
             break;
     }
 
@@ -128,7 +130,7 @@ async function renderSelfScore() {
         .then(response => response.json())
         .then(json => {
             // Get the container to render score
-            const container = document.getElementById("self-score-container");
+            const container = document.querySelector("#self-score-container");
             if (container) {
                 // Remove all children
                 while (container.firstChild) {
@@ -152,7 +154,7 @@ async function renderTopScores() {
         .then(response => response.json())
         .then(json => {
             // Get the container to render scores
-            const topScoresContainer = document.getElementById("top-scores-container");
+            const topScoresContainer = document.querySelector("#top-scores-container");
             if (topScoresContainer) {
                 // Remove all children
                 while (topScoresContainer.firstChild) {
